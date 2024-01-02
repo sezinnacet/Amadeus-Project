@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uçuş Arama Uygulaması</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+    <div class="flight-search-container">
+      <div class="trip-type-buttons">
+        <button
+          id="oneWayButton"
+          class="trip-type-button active"
+          onclick="setTripType('oneWay')"
+        >
+          Tek Yön
+        </button>
+        <button
+          id="roundTripButton"
+          class="trip-type-button"
+          onclick="setTripType('roundTrip')"
+        >
+          Gidiş Dönüş
+        </button>
+      </div>
+      <div class="search-fields">
+        <div id="airportsList" class="airports-list"></div>
+        <div class="input-group">
+          <label for="departureAirport">Nereden:</label>
+          <div class="input-with-icon">
+          <input
+            type="text"
+            class="input-field"
+            id="departureAirport"
+            placeholder="Nereden"/>
+
+           <div 
+            oninput="filterAirports('arrivalAirport')"
+            id="departureAirportDropdown"
+            class="dropdown hidden"></div>
+          
+          <div id="departureAirportList" class="airports-list hidden"></div>
+        </div>
+        <div class="input-group">
+          <label for="arrivalAirport">Nereye:</label>
+          <div class="input-with-icon">
+          <input
+            type="text"
+            id="arrivalAirport"
+            placeholder="Nereye"
+            class="input-field"/>
+            <div oninput="filterAirports('arrivalAirport')"
+            id="arrivalAirportDropdown"
+            class="dropdown hidden"></div>
+          
+          <div id="arrivalAirportList" class="airports-list hidden"></div>
+        </div>
+        <div id="arrivalAirportsList" class="airports-list hidden"></div>
+        <div class="input-group">
+          <label for="departureDate">Gidiş Tarihi:</label>
+          <input type="date" id="departureDate" class="input-field" />
+        </div>
+        <div class="input-group">
+          <div class="input-group" id="returnDateGroup">
+            <label for="returnDate" id="returnDateLabel">Dönüş Tarihi:</label>
+            <input type="date" id="returnDate" class="input-field"/>
+        </div>
+        <!-- Diğer arama alanları... -->
+      </div>
+      <div class="flight-results-container">
+      <button id="searchButton" onclick="searchFlights()" class="search-button">
+        UÇUŞ ARA
+      </button>
+      <div id="loadingOverlay" class="hidden">
+    </div>
+  </div>
+  <div id="flightResults" class="flight-results hidden">
+    <div id="selectedInfoPanel" class="info-panel hidden">
+      <ul id="selectedInfoList">
+      <button class="close-btn" onclick="closeInfoPanel()">&times;</button>
+      <h2>Ucuslar</h2>
+        <!-- Seçilen bilgiler burada listelenecek -->
+      </ul>
+    </div>
+    <div id="flightsList" class="flights-list hidden">
+      <!-- Dinamik olarak uçuş listesi buraya eklenecek -->
+    </div>
+  </div>
+  </div>
+    <div id="loading" class="loading hidden">
+      <div class="loader"></div>
+      Yükleniyor...
+  </div>
+      <div id="flightsList" class="hidden"></div>
+      <div id="message" class="message hidden"></div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
