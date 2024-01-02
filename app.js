@@ -53,17 +53,17 @@ const flightsData = {
       price: 350,
       baggageAllowance: "25kg",
     },
-    // Daha fazla uçuş verisi ekleyebilirsiniz...
+    
   ],
 };
 
 document.addEventListener("DOMContentLoaded", function () {
-  // ID'leri kullanarak elementleri bulun
+  
   const searchButton = document.getElementById("searchButton");
   const selectedInfoList = document.getElementById("selectedInfoList");
   const selectedInfoPanel = document.getElementById("selectedInfoPanel");
 
-  // Elementlerin varlığını kontrol edin
+  
   if (searchButton) {
     searchButton.addEventListener("click", searchFlights);
   } else {
@@ -71,14 +71,14 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   if (selectedInfoList && selectedInfoPanel) {
-    // Elementler bulunduysa ilgili işlemleri yapın
+    
   } else {
     console.error(
       "selectedInfoList veya selectedInfoPanel elementi bulunamadı."
     );
   }
 
-  // Diğer başlangıç işlemleriniz...
+ 
 });
 
 function prepareAirportsList(inputId) {
@@ -164,8 +164,7 @@ function searchFlights() {
 
 function displayFlights() {
   const flightResultsDiv = document.getElementById("flightResults");
-  flightResultsDiv.innerHTML = ""; // Önceki sonuçları temizle
-
+  flightResultsDiv.innerHTML = ""; 
   flightsData.flights.forEach((flight) => {
     const flightDiv = document.createElement("div");
     flightDiv.classList.add("flight-result-item");
@@ -184,13 +183,12 @@ function displayFlights() {
   flightResultsDiv.classList.remove("hidden");
 }
 function createInfoPanel() {
-  // selectedInfoPanel elementini oluşturun ve sayfaya ekleyin.
-  // ...
+  
 }
 
-// Butona tıklanınca bu fonksiyonu çağıracak event listener'ı ekleyin.
+
 document.addEventListener("DOMContentLoaded", function () {
-  // Elementlerin yüklendiğinden emin olduktan sonra event listener ekleyin.
+  
   var searchButton = document.getElementById("searchButton");
   if (searchButton) {
     searchButton.addEventListener("click", searchFlights);
@@ -221,7 +219,7 @@ function showSelectedInfo() {
   }
 }
 function attachEventListeners() {
-  // "Nereden" ve "Nereye" input alanları için event listener ekleyin
+  
   document
     .getElementById("departureAirport")
     .addEventListener("click", function () {
@@ -243,25 +241,23 @@ function showAirports(inputId) {
     return;
   }
 
-  // Dropdown menünün içeriğini temizle
-
-  // Tüm havaalanlarını dropdown menüye ekle
+  
   airports.forEach((airport) => {
     const option = document.createElement("div");
     option.className = "dropdown-option";
     option.textContent = `${airport.city} (${airport.code})`;
     option.onclick = function () {
-      input.value = option.textContent; // Input alanına bu değeri ata
-      dropdown.classList.add("hidden"); // Dropdown menüyü gizle
+      input.value = option.textContent; 
+      dropdown.classList.add("hidden"); 
     };
-    dropdown.appendChild(option); // Oluşturulan div'i dropdown'a ekle
+    dropdown.appendChild(option); 
   });
 
-  // Dropdown menüyü göster
+  
   dropdown.classList.remove("hidden");
 }
 
-// "Nereden" ve "Nereye" input alanları için event listener ekleyin
+
 document
   .getElementById("departureAirport")
   .addEventListener("click", function () {
