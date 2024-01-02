@@ -1,6 +1,6 @@
 # Amadeus-Project
  
-In this project, we worked on creating a flight search application. The main focus points and steps taken were:
+In this project, I worked on creating a flight search application. The main focus points and steps taken were:
 
 Basic HTML Structure Creation: A basic HTML structure was created for the flight search application. This structure included form fields for users to enter flight information (from, to, departure and return dates) and a search button.
 
