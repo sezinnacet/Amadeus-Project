@@ -136,64 +136,62 @@ body {
 .dropdown-icon {
   position: absolute;
   right: 10px;
-  pointer-events: none; /* Bu, simgenin tıklanabilir olmadığını belirtir */
+  pointer-events: none; 
 }
 .dropdown-icon {
-  cursor: pointer; /* Tıklanabilir olduğunu belirtir */
+  cursor: pointer; 
 }
 .info-panel {
   margin-left: 20px;
-  position: fixed; /* Sabit pozisyon */
-  right: 20px; /* Sağdan 20px boşluk */
-  top: 20px; /* Üstten 20px boşluk */
-  width: 300px; /* Otomatik genişlik */
-  background-color: #ffffff; /* Beyaz arka plan */
-  border: 1px solid #ddd; /* Kenarlık */
-  border-radius: 4px; /* Köşe yuvarlaklığı */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Gölge efekti */
-  padding: 10px; /* İç boşluk */
-  z-index: 1000; /* Z-index yüksekliği */
+  position: fixed; 
+  right: 20px; 
+  top: 20px; 
+  width: 300px; 
+  background-color: #ffffff;
+  border: 1px solid #ddd; 
+  border-radius: 4px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  padding: 10px; 
+  z-index: 1000; 
 }
 .close-btn {
-  float: right; /* Sağa hizalama */
-  border: none; /* Kenarlık yok */
-  background: none; /* Arka plan yok */
-  font-size: 20px; /* Font boyutu */
-  cursor: pointer; /* İmleç */
+  float: right; 
+  border: none; 
+  background: none; 
+  font-size: 20px; 
+  cursor: pointer; 
 }
 
 .hidden {
-  display: none; /* Başlangıçta gizle */
+  display: none; 
 }
 .flight-results-container {
-  margin-top: 20px; /* Arama kutusundan boşluk */
+  margin-top: 20px; 
 }
 
 .flight-results {
-  /* Sonuçlar için stil tanımlamaları */
-  flex-basis: 50%; /* Kutunun genişliğini ayarla */
-  margin-top: 20px; /* Üstten boşluk kaldır */
-  max-height: 600px; /* Maksimum yükseklik ayarla */
-  overflow-y: auto; /* İçerik uzunsa kaydırma çubuğu ekle */
-  background-color: #f1f1f1; /* Arka plan rengi */
-  border: 1px solid #ddd; /* Kenarlık */
-  padding: 20px; /* İç boşluk */
-  border-radius: 4px; /* Kenar yuvarlaklığı */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Gölge efekti */
+  flex-basis: 50%; 
+  margin-top: 20px; 
+  max-height: 600px; 
+  overflow-y: auto; 
+  background-color: #f1f1f1; 
+  border: 1px solid #ddd; 
+  padding: 20px; 
+  border-radius: 4px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
 }
 
 .flight-item:not(:last-child) {
-  border-bottom: none; /* Son eleman hariç diğerlerinin alt kenarlığını kaldır */
+  border-bottom: none; 
 }
 .search-and-results-container {
-  display: flex; /* Flexbox kullanarak yan yana diz */
-  align-items: flex-start; /* Üst kenarlardan hizala */
-  gap: 20px; /* İki öğe arasında boşluk bırak */
+  display: flex; 
+  align-items: flex-start; 
+  gap: 20px; 
 }
 
 .flight-search-container {
-  /* Arama kutusu için stil tanımlamaları */
-  flex-basis: 50%; /* Kutunun genişliğini ayarla */
+  flex-basis: 50%; 
 }
 .dropdown {
   position: absolute;
@@ -201,11 +199,11 @@ body {
   border: 1px solid #ddd;
   border-radius: 4px;
   padding: 5px;
-  width: 200px; /* İhtiyaca göre ayarlayın */
+  width: 200px; 
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   max-height: 200px;
   overflow-y: auto;
-  display: none; /* Başlangıçta gizli */
+  display: none;
 }
 
 .dropdown-option {
@@ -217,30 +215,30 @@ body {
   background-color: #e9e9e9;
 }
 .flight-results-container {
-  margin-top: 20px; /* Uçuş ara butonu ile arasında boşluk bırak */
+  margin-top: 20px; 
 }
 
 .flight-result-item {
-  background: #f8f8f8; /* Her kutucuğun arka plan rengi */
-  border: 1px solid #eaeaea; /* Çerçeve rengi */
-  padding: 8px; /* İç boşluğu azalt */
-  margin-bottom: 8px; /* Kutucuklar arasındaki boşluğu azalt */
-  border-radius: 4px; /* Kenarları yuvarlak yap */
-  width: auto; /* Genişliği içeriğe göre ayarla */
-  max-width: 500px; /* Maksimum genişlik sınırlaması ekle */
+  background: #f8f8f8; 
+  border: 1px solid #eaeaea; 
+  padding: 8px; 
+  margin-bottom: 8px; 
+  border-radius: 4px; 
+  width: auto; 
+  max-width: 500px; 
 }
 
 .flight-detail {
-  display: flex; /* İçerideki elemanları yan yana sırala */
-  justify-content: space-between; /* Elemanlar arası boşluğu eşit dağıt */
-  align-items: center; /* Elemanları dikeyde ortala */
-  flex-wrap: wrap; /* Eğer genişlik dar ise alt satıra geçsin */
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  flex-wrap: wrap; 
 }
 
 .flight-detail > span {
-  margin: 4px; /* Her bir span arasındaki boşluğu azalt */
-  display: block; /* Her birini blok olarak göster */
-  min-width: 100px; /* Minimum genişliği azalt */
+  margin: 4px; 
+  display: block;
+  min-width: 100px; 
 }
 .hidden {
   display: none;
@@ -259,7 +257,7 @@ body {
   z-index: 9999;
 }
 
-/* Yükleme spinner için stil */
+
 .loader {
   border: 4px solid #f3f3f3;
   border-top: 4px solid #3498db;
@@ -269,7 +267,7 @@ body {
   animation: spin 2s linear infinite;
 }
 
-/* Spinner animasyonu */
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
